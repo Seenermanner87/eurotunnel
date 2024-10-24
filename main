@@ -46,6 +46,7 @@ Tab:AddButton({
 	Name = "Restart the UI (NOTE: You will not have to execute the script again.",
 	Callback = function()
       		OrionLib:Destroy()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Seenermanner87/eurotunnel/refs/heads/main/main"))()
   	end    
 })
 Tab:AddButton({
