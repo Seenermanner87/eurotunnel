@@ -1,0 +1,60 @@
+local player = game.Players.LocalPlayer.Character
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "[UK:RP] Eurotunnel, Le Shuttle", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroText = "Porvle Presents"})
+
+OrionLib:MakeNotification({
+	Name = "Note",
+	Content = "Made by Porvle",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+local Tab = Window:MakeTab({
+	Name = "Teleport",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Teleport"
+})
+Tab:AddLabel("Remember to buy the smuggle items before teleporting!")
+Tab:AddButton({
+	Name = "Civ Spawn",
+	Callback = function()
+      		player:MoveTo(Vector3.new(222, 5, 175))
+  	end    
+})
+Tab:AddButton({
+	Name = "French Dealer",
+	Callback = function()
+      		player:MoveTo(Vector3.new(12147, 55, -494))
+  	end    
+})
+Tab:AddButton({
+	Name = "Border",
+	Callback = function()
+      		player:MoveTo(Vector3.new(3837, 51, 767))
+  	end    
+})
+Tab:AddButton({
+	Name = "Kill the UI (NOTE: You will have to execute the script again for the UI to show.",
+	Callback = function()
+      		OrionLib:Destroy()
+  	end    
+})
+Tab:AddButton({
+	Name = "Restart the UI (NOTE: You will not have to execute the script again.",
+	Callback = function()
+      		OrionLib:Destroy()
+  	end    
+})
+Tab:AddButton({
+	Name = "Activate a while loop that sets the civ shop gui position to 0.1 every 5 seconds",
+	Callback = function()
+        while true do
+            wait(5)
+      		game:GetService("Players").LocalPlayer.PlayerGui.UKCIVISHOP.main.Position = UDim2.new(0.1, 0, 0.5, 0)
+  	end  
+    end 
+})
+OrionLib:Init()
