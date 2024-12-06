@@ -19,9 +19,9 @@ local Section = Tab:AddSection({
 })
 Tab:AddLabel("Remember to buy the smuggle items before teleporting!")
 Tab:AddButton({
-	Name = "Civ Spawn",
+	Name = "Civ Spawn Dealer",
 	Callback = function()
-      		player:MoveTo(Vector3.new(222, 5, 175))
+      		player:MoveTo(Vector3.new(127, 5, 225))
   	end    
 })
 Tab:AddButton({
